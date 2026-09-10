@@ -74,3 +74,31 @@ Combined lodging and other revenue:
 
 ```python
 TotalRevenue = LodgingRevenue + OtherRevenue
+
+## Model Selection
+
+### Elbow Method
+
+![Elbow Method](images/elbow_method.png)
+
+### Silhouette Score
+
+![Silhouette Score](images/silhouette_score.png)
+
+## Customer Segment Results
+
+### Customer Distribution by Segment
+
+![Customer Distribution by Segment](images/customer_distribution_by_segment.png)
+
+### Share of Customers by Segment
+
+![Share of Customers by Segment](images/share_of_customers_by_segment.png)
+
+### Average Revenue by Segment
+
+![Average Revenue by Segment](images/average_revenue_by_segment.png)
+
+### Guest Segment Behavioral Profiles
+
+![Guest Segment Behavioral Profiles](images/guest_segment_behavioral_profiles.png)
