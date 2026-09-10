@@ -74,7 +74,10 @@ Combined lodging and other revenue:
 
 ```python
 TotalRevenue = LodgingRevenue + OtherRevenue
+RevenuePerNight = TotalRevenue / RoomNights
+RevenuePerNight = TotalRevenue / RoomNights
 ```
+
 ## Model Selection
 
 ### Elbow Method
@@ -82,6 +85,10 @@ TotalRevenue = LodgingRevenue + OtherRevenue
 ![Elbow Method](images/elbow_method.png)
 
 ### Silhouette Score
+
+### Final Cluster Selection
+
+Although k = 2 achieved the highest Silhouette Score (0.3229), a four-cluster solution was selected for the final segmentation. The k = 4 solution retained a comparable Silhouette Score (0.3089) while producing more differentiated and commercially actionable guest profiles. Cluster selection therefore considered both statistical quality and business interpretability.
 
 ![Silhouette Score](images/silhouette_score.png)
 
