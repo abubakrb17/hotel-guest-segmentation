@@ -1,0 +1,5 @@
+Cluster,Segment,Customers,Age,AverageLeadTime,TotalRevenue,RoomNights,BookingsCheckedIn,DaysSinceLastStay,IsRepeater,Share (%)
+0,High-Value Loyal Guests,7239,44.6,88.2,1334.2,6.0,1.3,431.4,0.1,8.7
+1,Core Occasional Guests,41102,45.0,45.0,361.4,2.6,1.0,573.7,0.0,49.2
+2,Advance-Planner Guests,13919,56.0,217.3,424.6,3.1,1.0,483.8,0.0,16.7
+3,Low-Activity / New Guests,21330,39.6,1.0,9.6,0.1,0.1,5.2,0.0,25.5
