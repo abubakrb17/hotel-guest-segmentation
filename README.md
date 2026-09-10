@@ -68,13 +68,13 @@ Main preparation steps included:
 
 Three additional variables were created:
 
-**TotalRevenue**
+### TotalRevenue
 
 Combined lodging and other revenue:
 
 ```python
 TotalRevenue = LodgingRevenue + OtherRevenue
-
+```
 ## Model Selection
 
 ### Elbow Method
