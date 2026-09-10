@@ -1,37 +1,76 @@
-# AI-Powered Guest Segmentation for Targeted Marketing Campaigns
+# Hotel Guest Segmentation
+
+Customer segmentation project using Python and K-Means clustering to identify distinct hotel guest groups and translate behavioral patterns into actionable business strategies.
+
+## Project Overview
+
+This project analyzes a hotel customer dataset containing 83,590 guest records and 31 variables.
+
+The objective was to segment customers into meaningful groups based on booking behavior, revenue contribution, stay activity, and recency so that hotel managers can design more targeted retention, loyalty, acquisition, and promotional strategies.
+
+The analysis combines:
+
+- data cleaning
+- feature engineering
+- exploratory analysis
+- feature scaling
+- K-Means clustering
+- Elbow Method
+- Silhouette Score
+- cluster profiling
+- business interpretation
 
 ## Business Problem
-Hotels treat most guests the same way. This leads to wasted marketing budget and missed opportunities with high-value customers.
 
-This project uses machine learning to segment 83,590 real hotel customers into meaningful groups and recommends specific marketing actions for each segment.
+Hotels serve customers with very different booking habits, spending levels, stay frequency, and planning behavior.
+
+Treating every guest the same can reduce marketing efficiency and weaken retention strategies.
+
+This project aims to answer:
+
+- Which customer groups generate the most value?
+- Which guests are most likely to behave like loyal customers?
+- Which customers book far in advance?
+- Which guests show very limited historical activity?
+- How should hotel management approach each segment differently?
 
 ## Dataset
-- Source: Real hotel customer data from a 4-star hotel in Lisbon, Portugal (2015–2018)
-- Size: 83,590 customers
-- Features: Demographic, behavioral, and revenue data
 
-## Approach
-1. Data cleaning and feature engineering (Total Revenue, Revenue per Night, Repeater flag)
-2. Selected key behavioral and value features
-3. Standardized the data
-4. Applied K-Means clustering (4 segments)
-5. Interpreted each segment in hotel business language
+The dataset contains approximately **83,590 customer records** and **31 variables**.
 
-## Results – Guest Segments
+Key variables used in the analysis include:
 
-| Segment | Size | Name | Avg. Total Revenue | Key Traits | Recommended Action |
-|---------|------|------|--------------------|------------|--------------------|
-| 3 | 1,455 | Loyal High-Value Guests | 948 | True repeaters, highest spend, longer stays | VIP treatment, loyalty offers, exclusive upgrades |
-| 0 | 20,008 | High-Spending Planners | 700 | Book far in advance, high revenue | Early-bird premium packages, long-stay offers |
-| 1 | 40,670 | Typical Transient Guests | 369 | Standard one-time guests | Room upgrade & breakfast upselling |
-| 2 | 21,457 | Low-Engagement Guests | 11 | Almost no revenue or stays | Low marketing priority |
+- Age
+- AverageLeadTime
+- LodgingRevenue
+- OtherRevenue
+- RoomNights
+- BookingsCheckedIn
+- DaysSinceLastStay
 
-## Business Impact
-- Identifies the small group of guests who generate the highest revenue
-- Helps marketing teams stop wasting budget on low-value segments
-- Supports personalized campaigns and better resource allocation
+Additional customer and booking characteristics were available in the original dataset.
 
-## Tech Stack
-- Python, pandas, scikit-learn
-- K-Means clustering
-- Feature engineering for hospitality metrics
+## Data Preparation
+
+The dataset was cleaned before clustering.
+
+Main preparation steps included:
+
+1. loading the Excel dataset with pandas
+2. checking data types and missing values
+3. handling missing Age values
+4. correcting invalid or negative values where appropriate
+5. creating derived business features
+6. selecting relevant clustering variables
+7. standardizing numerical features using `StandardScaler`
+
+### Feature Engineering
+
+Three additional variables were created:
+
+**TotalRevenue**
+
+Combined lodging and other revenue:
+
+```python
+TotalRevenue = LodgingRevenue + OtherRevenue
